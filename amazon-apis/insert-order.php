@@ -11,9 +11,10 @@ $price = $_REQUEST["price"];
 $transaction_id = $_REQUEST["transaction_id"];
 $address = $_REQUEST["address"];
 $amount = $_REQUEST["amount"];
+$status = "Pending";
 
 if ($connection) {
-    $insertQuery = "INSERT INTO `orders` VALUES ('$user_id', '$product_id', '$quantity', '$price', '$transaction_id', '$address', '$amount')";
+    $insertQuery = "INSERT INTO `orders` VALUES ('$user_id', '$product_id', '$quantity', '$price', '$transaction_id', '$address', '$amount','$status')";
     
     $insertResult = mysqli_query($connection, $insertQuery);
 

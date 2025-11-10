@@ -16,7 +16,12 @@ function Login() {
     sessionStorage.setItem("login", true);
     localStorage.setItem("name", response.data.data.first_name);
     localStorage.setItem("user_id", response.data.data.user_id);
-    window.location.replace("/");  // Redirect to homepage
+    const email = document.getElementById('login-email').value;
+        if (email === "admin" || email === "admin@gmail.com") {
+          window.location.replace("/admin");
+        } else {
+          window.location.replace("/");
+        }
   }
 } else {
   console.log('error');

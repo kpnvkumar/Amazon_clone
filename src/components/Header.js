@@ -56,10 +56,10 @@ function Header() {
         </a>
 
         {/* Orders */}
-        <div className="orders-container">
-          <p className="returns">Returns</p>
-          <p className="orders">& Orders</p>
-        </div>
+        <a href="/orders" className="orders-container" style={{ textDecoration: "none" }}>
+        <p className="returns">Returns</p>
+        <p className="orders">& Orders</p>
+      </a>
 
         {/* Cart */}
         <div className="cart-container">

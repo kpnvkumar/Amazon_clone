@@ -6,7 +6,9 @@ import Homeimprovements from "./pages/Homeimprovements";
 import { Routes, BrowserRouter, Route } from "react-router-dom";
 import CartPage from "./pages/CartPage";
 import Login from "./pages/Login";
+import Orders from "./pages/Orders";
 import SignUp from "./pages/SignUp";
+import Admin from "./pages/Admin";
 import Accounts from "./pages/Accounts";
 import ItemDetails from "./pages/ItemDetails";
 import UserContext from "./pages/UserContext";
@@ -24,6 +26,8 @@ import Fashion from"./pages/Fashion";
 import Electronics from './pages/Electronics';
 import Books from './pages/Books';
 import Bikes_cars from './pages/Bikes_cars';
+import Sidebar from "./pages/Sidebar";
+import Payments from "./pages/Payments";
 function App() {
   const [products, setProducts] = useState(null);
 
@@ -68,9 +72,13 @@ function App() {
             <Route path="/Mobiles" element={<Mobiles/>}/>
             <Route path="/Fashion" element={<Fashion/>}/>
             <Route path="/Homeandkitchen" element={<Homeandkitchen/>}/>
+            <Route path="/Payments" element={<Payments/>}/>
             <Route path="/Electronics" element={<Electronics/>}/>
             <Route path="/Books" element={<Books/>}/>
             <Route path="/Bikes" element={<Bikes_cars/>}/>
+            <Route path="/Sidebar" element={<Sidebar/>}/>
+            <Route path="/Admin" element={<Admin/>}/>
+            <Route path="/orders" element={<Orders />} />
           </Routes>
 
           <Footer />
